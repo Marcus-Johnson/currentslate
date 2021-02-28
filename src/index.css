@@ -8,6 +8,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #E1E1E1; 
 }
 
 .container {
@@ -15,7 +17,8 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  background-color: #454646;
+  border: 1px solid #454646;
   padding: 30px;
   border-radius: 5px;
 }
@@ -29,7 +32,7 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: #292929;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -55,14 +58,14 @@ body {
 }
 
 .task {
-  background: #f4f4f4;
+  background: #1F1F1F;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .task.reminder {
-  border-left: 5px solid green;
+  border-left: 5px solid #65BE60;
 }
 
 .task h3 {
@@ -109,4 +112,8 @@ body {
 footer {
   margin-top: 30px;
   text-align: center;
+}
+
+.tasksList {
+  background-color: transparent;
 }
