@@ -10,13 +10,13 @@ function App() {
             id: 1, 
             text: 'SCRUM board review',
             day: 'March 26 at 12:30pm',
-            reminder: true,
+            reminder: false,
         },
         {
             id: 2, 
             text: 'AGILE methods review',
             day: 'March 26 at 1:10pm',
-            reminder: true,
+            reminder: false,
         },
         {
             id: 3, 
@@ -31,10 +31,18 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id))  
   }
 
+  const toggleReminder = (id) => {
+    setTasks(tasks.map((task) =>
+    task.id === id ? {...task, reminder:
+       !task.reminder} : task
+      )
+    )
+  }
+
   return (
     <div className="container">
       <Header />
-      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} />:
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>:
       'Your slate is empty, add tasks to continue!'}
     </div>
   );
