@@ -6,10 +6,7 @@ const Header = ({ title, onAdd, showAdd }) => {
     return (
         <header className='header'>
             <h1>{title}</h1>
-            <Button 
-                color={ showAdd ? 'maroon' : '#005CC8' } 
-                text={ showAdd ? '✕' : '＋' } 
-                onClick={onAdd} />
+            <Button color={ showAdd ? 'maroon' : '#005CC8' } text={ showAdd ? '✕' : '＋' } onClick={onAdd} />
         </header>
     )
 }
