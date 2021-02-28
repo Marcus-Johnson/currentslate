@@ -1,9 +1,20 @@
-const Header = () => {
+import PropTypes from 'prop-types'
+
+
+const Header = ({ title }) => {
     return (
         <header>
-            <h1>Currentslate</h1>
+            <h1>{title}</h1>
         </header>
     )
+}
+
+Header.defaultProps = {
+    title: 'currentslate',
+}
+
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
 }
 
 export default Header
