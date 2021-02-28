@@ -62,6 +62,7 @@ body {
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .task.reminder {
@@ -76,6 +77,11 @@ body {
 
 .add-form {
   margin-bottom: 40px;
+}
+
+.textInput {
+  outline: none;
+  border-radius: 5px;
 }
 
 .form-control {

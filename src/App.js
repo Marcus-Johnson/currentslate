@@ -10,21 +10,17 @@ function App() {
         {
             id: 1, 
             text: 'SCRUM board review',
-            day: 'March 26 at 12:30pm',
+            day: '2021-02-10',
+            time: '01:55',
             reminder: false,
         },
         {
             id: 2, 
             text: 'AGILE methods review',
-            day: 'March 26 at 1:10pm',
-            reminder: false,
+            day: '2021-03-15',
+            time: '01:56',
+            reminder: true,
         },
-        {
-            id: 3, 
-            text: 'Trello team review',
-            day: 'March 26 at 2:30pm',
-            reminder: false,
-        }
     ]
   )
 

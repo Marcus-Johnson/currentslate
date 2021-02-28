@@ -3,19 +3,17 @@ import { useState } from 'react'
 const AddTask = ({ onAdd }) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
+    const [time, setTime] = useState('')
     const [reminder, setReminder] = useState(false)
 
     const onSubmit = (e) => {
         e.preventDefault()
-
-        if(!text){
-            alert('Please add a task')
-        }
         
-        onAdd({text, day, reminder})
+        onAdd({text, day, time, reminder})
 
         setText('')
         setDay('')
+        setTime('')
         setReminder(false)
     }
 
@@ -23,11 +21,15 @@ const AddTask = ({ onAdd }) => {
         <form className='add-form' onSubmit={onSubmit}>
             <div className='form-control'>
                 <label>Task</label>
-                <input type='text' placeholder='Add task' value={text} onChange={(e) => setText(e.target.value)}/>
+                <input className='textInput' type='text' placeholder='Add task title' value={text} onChange={(e) => setText(e.target.value)} required/>
             </div>
             <div className='form-control'>
-                <label>Day and Time</label>
-                <input type='text' placeholder='Add Day and Time' value={day} onChange={(e) => setDay(e.target.value)}/>
+                <label>Day</label>
+                <input type='date' value={day} default={Date.now()} onChange={(e) => setDay(e.target.value)} required pattern="\d{4}-\d{2}-\d{2}" required/>
+            </div>
+            <div className='form-control'>
+                <label>Time</label>
+                <input type='time' value={time} onChange={(e) => setTime(e.target.value)} required/>
             </div>
             <div className='form-control form-control-check'>
                 <label>Set Reminder</label>
